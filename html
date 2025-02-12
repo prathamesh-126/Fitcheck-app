@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitCheck</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Interface 1: App Icon and Name -->
+  <div id="interface1" class="interface active">
+    <div class="center-content">
+      <h1>FitCheck</h1>
+      <p class="quote">Be STRONGER than your EXCUSES..!!</p>
+      <button onclick="nextInterface()">Start</button>
+    </div>
+  </div>
+
+  <!-- Interface 2: Gender Selection -->
+  <div id="interface2" class="interface">
+    <div class="center-content">
+      <h2>Select Your Gender</h2>
+      <div class="gender-icons">
+        <img src="male.png" alt="Male" onclick="selectGender('male')">
+        <img src="female.png" alt="Female" onclick="selectGender('female')">
+      </div>
+    </div>
+  </div>
+
+  <!-- Interface 3: Date of Birth -->
+  <div id="interface3" class="interface">
+    <div class="center-content">
+      <h2>Enter Your Date of Birth</h2>
+      <input type="date" id="dob" required>
+      <img src="siblings.png" alt="Aging icon" class="aging-image">
+      <button onclick="nextInterface()">Next</button>
+    </div>
+  </div>
+
+  <!-- Interface 4: Weight and Height -->
+  <div id="interface4" class="interface">
+    <div class="center-content">
+      <h2>Enter Your Weight and Height</h2>
+      <input type="number" id="weight" placeholder="Weight (kg)" required>
+      <input type="number" id="height" placeholder="Height (cm)" required>
+      <button onclick="nextInterface()">Next</button>
+    </div>
+  </div>
+
+  <!-- Interface 5: Weight and Height Difference -->
+
+  <div id="interface5" class="interface">
+    <div class="center-content">
+    <h2>Your Diet Plan is Almost Ready</h2>
+      <p id="weightDifference"></p>
+      <p id="heightDifference"></p>
+      <button onclick="calculateDifference(); nextInterface();">Next</button>
+    </div>
+  </div>
+
+  <!-- Interface 6: Daily Routine -->
+  <div id="interface6" class="interface">
+    <div class="center-content">
+      <h2>Diet Plan 1</h2>
+      <div id="mealPlan"></div>
+      <button onclick="generateMealPlan(); nextInterface();">Next</button>
+    </div>
+  </div>
+
+  <!-- Interface 7: Daily Routine -->
+  <div id="interface7" class="interface">
+    <div class="center-content">
+      <h2>Diet Plan 2</h2>
+      <div id="mealPlan1"></div>
+      <button onclick="restartApp()"> <a href="http://fitcheck84.tiiny.site/">Restart</a></button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
